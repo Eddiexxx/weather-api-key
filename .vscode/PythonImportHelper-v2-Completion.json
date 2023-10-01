@@ -1,0 +1,45 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_weather",
+        "kind": 2,
+        "importPath": "weather",
+        "description": "weather",
+        "peekOfCode": "def get_current_weather():\n    print('\\n*** Get Current Weather Condotion ***\\n')\n    city = input('\\nPlease enter a city name:\\n')\n    request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv(\"API_KEY\")}&q={city}&units=metric'\n    # print(request_url)\n    weather_data = requests.get(request_url).json()\n    print()\n    # pprint(weather_data)\n    print(f'\\nCurrent weather for {weather_data[\"name\"]}')\n    print(f'\\nThe temp is {weather_data[\"main\"][\"temp\"]}')",
+        "detail": "weather",
+        "documentation": {}
+    }
+]
